@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="fmyxyz.mybatis_generatorConfig.SysMapper">
+	<select id="getTables" resultType="fmyxyz.mybatis_generatorConfig.SysObjects">
+		<if test="dbType=='sqlserver'">
+			SELECT name,xtype,type FROM SysObjects Where XType='U' ORDER BY Name
+			<!-- xtype='U' 表名 ; xtype='V' 视图名 ； xtype='P' 存储过程 ；xtype='F' 函数 -->
+		</if>
+		<if test="dbType=='mysql'">
+			select table_name name from information_schema.tables where  table_type='base table'
+		</if>
+		<if test="dbType=='oracle'">
+			SELECT table_name name FROM USER_TABLES
+		</if>
+	</select>
+</mapper>
