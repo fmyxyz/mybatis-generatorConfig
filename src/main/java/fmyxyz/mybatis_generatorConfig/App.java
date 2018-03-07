@@ -3,7 +3,7 @@ package fmyxyz.mybatis_generatorConfig;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
- * Hello world!
+ * main 运行
  *
  */
 

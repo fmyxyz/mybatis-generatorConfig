@@ -16,7 +16,7 @@ import org.springframework.stereotype.Service;
 import com.alibaba.druid.pool.DruidDataSource;
 
 /**
- * Hello world!
+ * 自动生成器
  *
  */
 @Service
